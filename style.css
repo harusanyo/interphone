@@ -1,0 +1,43 @@
+/* ページ全体の設定 */
+body {
+  background-color: #fffaf7; /* やさしいアイボリー */
+  font-family: "Noto Sans JP", sans-serif; /* 文字をきれいに */
+  text-align: center;
+  padding: 40px;
+  color: #4b4b4b; /* 少しやわらかい文字色 */
+}
+
+/* タイトル（例：「インターホン応答」） */
+h1 {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ボタン全体のスタイル */
+button {
+  background-color: #ffdfe8; /* やさしいピンク */
+  color: #4b4b4b;
+  border: none;
+  border-radius: 12px; /* 丸みをつける */
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影でふんわり */
+}
+
+/* マウスを乗せた時の動き */
+button:hover {
+  background-color: #ffc9d8;
+  transform: scale(1.03);
+}
+
+/* スマホでも見やすく */
+@media (max-width: 600px) {
+  button {
+    width: 90%;
+    font-size: 18px;
+  }
+}
