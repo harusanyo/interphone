@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>インターホン応答ページ</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f2f5;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>インターホン応答</h1>
+
+  <button class="button" onclick="playSound('玄関の前にお願いします.m4a')">玄関の前にお願いします</button>
+  <button class="button" onclick="playSound('あとでうかがいますね.m4a')">あとでうかがいますね</button>
+  <button class="button" onclick="playSound('ありがとうございます.m4a')">ありがとうございます</button>
+  <button class="button" onclick="playSound('いまいきます.m4a')">いま行きます</button>
+  <button class="button" onclick="playSound('すみません今ちょっとでられないです.m4a')">すみません今ちょっと出られません</button>
+  <button class="button" onclick="playSound('ちょっと待ってください.m4a')">ちょっと待ってください</button>
+  <button class="button" onclick="playSound('どちらさまですか.m4a')">どちらさまですか？</button>
+  <button class="button" onclick="playSound('はいどぞ.m4a')">はい、どうぞ</button>
+
+  <script>
+    function playSound(fileName) {
+      const audio = new Audio('sounds/' + fileName);
+      audio.play();
+    }
+  </script>
+</body>
+</html>
