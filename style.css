@@ -1,43 +1,60 @@
-/* ページ全体の設定 */
+/* ページ全体 */
 body {
-  background-color: #fffaf7; /* やさしいアイボリー */
-  font-family: "Noto Sans JP", sans-serif; /* 文字をきれいに */
+  background-color: #f9f9f9;
+  font-family: "Noto Sans JP", sans-serif;
   text-align: center;
-  padding: 40px;
-  color: #4b4b4b; /* 少しやわらかい文字色 */
+  margin: 0;
+  padding: 0;
 }
 
-/* タイトル（例：「インターホン応答」） */
+/* タイトル */
 h1 {
-  font-size: 24px;
-  color: #555;
-  margin-bottom: 30px;
+  font-size: 22px;
+  color: #444;
+  margin: 15px 0;
 }
 
-/* ボタン全体のスタイル */
+/* ボタンを格子状に配置する */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列 */
+  gap: 15px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ボタン全体 */
 button {
-  background-color: #ffdfe8; /* やさしいピンク */
-  color: #4b4b4b;
+  background-color: #ffe4ec; /* やさしいピンク */
+  color: #333;
   border: none;
-  border-radius: 12px; /* 丸みをつける */
-  padding: 12px 20px;
-  margin: 10px;
-  font-size: 16px;
+  border-radius: 50%; /* 丸い形 */
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影でふんわり */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s, background-color 0.3s;
 }
 
-/* マウスを乗せた時の動き */
-button:hover {
+/* 押した時のアニメーション */
+button:active {
+  transform: scale(0.95);
   background-color: #ffc9d8;
-  transform: scale(1.03);
 }
 
-/* スマホでも見やすく */
+/* スマホ全画面対応（ボタン大きめ） */
 @media (max-width: 600px) {
+  .button-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
   button {
-    width: 90%;
-    font-size: 18px;
+    width: 90px;
+    height: 90px;
+    font-size: 13px;
   }
 }
