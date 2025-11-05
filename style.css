@@ -1,42 +1,53 @@
-/* ページ全体 */
 body {
-  background-color: #fffaf7;
+  background-color: #fffdf9;
   font-family: "Noto Sans JP", sans-serif;
   text-align: center;
   padding: 20px;
-  color: #4b4b4b;
   margin: 0;
 }
 
-/* タイトル */
 h1 {
-  font-size: 28px;
+  font-size: 26px;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-button {
-  background: linear-gradient(to bottom, #ffe6ee, #ffb6c1); /* 上→下にピンクグラデーション */
-  color: #4b4b4b;
-  border: 1px solid #e0a3b0; /* 少し濃い境界線で立体感 */
-  border-radius: 12px;
-  padding: 22px 0;
-  margin: 10px 0;
+/* ボタン全体の配置 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ボタンスタイル */
+.button {
+  background: linear-gradient(145deg, #ffece2, #ffd6c4);
+  border: none;
+  border-radius: 18px;
+  padding: 20px 0;
   font-size: 22px;
-  width: 90vw;
-  max-width: 600px;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  box-shadow: 0 6px 0 #e59cae, 0 6px 10px rgba(0, 0, 0, 0.1); /* 下に影 */
+  color: #4b3b32;
+  font-weight: bold;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15),
+              -2px -2px 6px rgba(255, 255, 255, 0.8);
+  width: 100%;
+  transition: all 0.2s ease;
 }
 
-/* 押したときの動き */
-button:active {
-  transform: translateY(4px); /* 下に少し沈む */
-  box-shadow: 0 2px 0 #e59cae, 0 2px 6px rgba(0, 0, 0, 0.2);
+/* 押したときの感じ */
+.button:active {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+  transform: translateY(2px);
 }
 
-/* ホバー時（PC用） */
-button:hover {
-  background: linear-gradient(to bottom, #ffd1de, #ffa4b8);
+/* スマホで文字を見やすく */
+@media (max-width: 480px) {
+  .button {
+    font-size: 24px;
+    padding: 22px 0;
+  }
 }
