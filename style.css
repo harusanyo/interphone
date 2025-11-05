@@ -21,37 +21,25 @@ button {
   color: #4b4b4b;
   border: none;
   border-radius: 12px;
-  padding: 20px 0;           /* 縦の余白を多めに */
+  padding: 24px 0;
   margin: 10px 0;
-  font-size: 20px;           /* 文字を大きく */
-  width: 100%;               /* 横幅を画面いっぱいに！ */
-  max-width: 500px;          /* タブレットでは広がりすぎないよう制限 */
+  font-size: 22px;
+  width: 90vw; /* ←画面幅の90%に変更 */
+  max-width: 600px; /* ←横幅制限を少し広く */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.1s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ホバー時（スマホではタップ時に近い） */
-button:hover {
-  background-color: #ffc9d8;
-  transform: scale(1.02);
-}
-
-/* 中央寄せ（ボタンの最大幅を中央に） */
-body > * {
+/* ボタンを中央寄せ（個別に） */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* スマホ用の微調整 */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 22px;
-  }
-  button {
-    font-size: 22px;
-    padding: 24px 0;
-    border-radius: 14px;
-  }
+/* ホバー時 */
+button:hover {
+  background-color: #ffc9d8;
+  transform: scale(1.02);
 }
