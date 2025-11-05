@@ -15,31 +15,28 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* ボタン */
 button {
-  background-color: #ffdfe8;
+  background: linear-gradient(to bottom, #ffe6ee, #ffb6c1); /* 上→下にピンクグラデーション */
   color: #4b4b4b;
-  border: none;
+  border: 1px solid #e0a3b0; /* 少し濃い境界線で立体感 */
   border-radius: 12px;
-  padding: 24px 0;
+  padding: 22px 0;
   margin: 10px 0;
   font-size: 22px;
-  width: 90vw; /* ←画面幅の90%に変更 */
-  max-width: 600px; /* ←横幅制限を少し広く */
+  width: 90vw;
+  max-width: 600px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 6px 0 #e59cae, 0 6px 10px rgba(0, 0, 0, 0.1); /* 下に影 */
 }
 
-/* ボタンを中央寄せ（個別に） */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* 押したときの動き */
+button:active {
+  transform: translateY(4px); /* 下に少し沈む */
+  box-shadow: 0 2px 0 #e59cae, 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ホバー時 */
+/* ホバー時（PC用） */
 button:hover {
-  background-color: #ffc9d8;
-  transform: scale(1.02);
+  background: linear-gradient(to bottom, #ffd1de, #ffa4b8);
 }
